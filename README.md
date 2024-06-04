@@ -1,1 +1,3 @@
-# Temperature-Prediction-RNN
+# Temperature Prediction with Recurrent Neural Networks
+
+After trying different aproaches to the LSTM Neural Network what really improved the performance was adding a day of the year column. I also removed some temperature outliers (99.9 percentile) from the data because it reduced the errors. The model performs reasonably well and seems to predict the year 2017 pretty accurately. Looking at the residuals, they have a clear normal distribution. I tuned the architecture of the neural network to reduce overfitting and heteroscedasticity of the residuals. The model was overfitting and there was not heteroscedascity in the residuals. At first I tried changing the parameters of the model and training size but the best solution was to add early stopping to the training process because this was what was affecting the performance.
